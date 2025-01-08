@@ -1,11 +1,18 @@
-local M = { 'nvim-telescope/telescope.nvim' }
-
--- [[ Loading ]]
-M.event = 'VeryLazy'
-
--- [[ Dependencies ]]
-M.dependencies = {
-  'nvim-lua/plenary.nvim'
+return { 
+  'nvim-telescope/telescope.nvim',
+  event = 'VeryLazy',
+  dependencies = {
+    'nvim-lua/plenary.nvim'
+  },
+  opts = {
+    pickers = {
+      help_tags = {
+        mappings = {
+          i = {
+            ['<CR>'] = 'file_vsplit',
+          },
+        },
+      },
+    },
+  },
 }
-
-return M
