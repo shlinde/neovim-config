@@ -12,7 +12,7 @@ return {
       enabled = true,
       timeout = 3000,
     },
-    quickfile = { enabled = true },
+  quickfile = { enabled = true },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
@@ -21,11 +21,11 @@ return {
         -- wo = { wrap = true } -- Wrap notifications
       }
     },
-    terminal = {
-      win = {
-        position = "right"
-      },
-    },
+    -- terminal = {
+    --   win = {
+    --     position = "right"
+    --   },
+    -- },
   },
   keys = {
     { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
@@ -41,7 +41,8 @@ return {
     { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
     { "<leader>gl", function() Snacks.lazygit.log() end, desc = "Lazygit Log (cwd)" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
-    { "<leader>tt",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
+    { "<leader>tt", function() Snacks.terminal() end, desc = "Toggle Terminal" },
+    { "<leader>tv", function() Snacks.terminal() end, desc = "Toggle Terminal" },
     { "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
     { "]]",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
     { "[[",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
