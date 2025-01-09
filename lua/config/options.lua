@@ -47,5 +47,7 @@ if not vim.env.SSH_TTY or vim.fn.has "nvim-0.10" ~= 1 then -- only set `clipboar
   vim.opt.clipboard = "unnamedplus" -- connection to the system clipboard
 end
 
+vim.opt.fsync = false
+
 -- [[ Files ]]
 vim.g.netrw_liststyle = 3
