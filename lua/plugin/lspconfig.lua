@@ -7,6 +7,7 @@ return {
     servers = {
       lua_ls = {},
       basedpyright = {},
+      zls = {},
     }
   },
   config = function(_, opts)
